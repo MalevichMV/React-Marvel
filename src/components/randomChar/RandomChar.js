@@ -37,9 +37,6 @@ const RandomChar = () => {
 
     return (
         <div className="randomchar">
-            {errorMessage}
-            {spinner}
-            {content}
             <div className="randomchar__static">
                 <p className="randomchar__title">
                     Random character for today!<br/>
@@ -54,6 +51,9 @@ const RandomChar = () => {
                 </button>
                 <img src={mjolnir} alt="mjolnir" className="randomchar__decoration"/>
             </div>
+            {errorMessage}
+            {spinner}
+            {content}
         </div>
     )
 

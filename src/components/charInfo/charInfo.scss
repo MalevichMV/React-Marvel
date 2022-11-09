@@ -2,32 +2,40 @@
 
 .char {
     &__info {
+        box-sizing: border-box;
         padding: 25px;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
         position: relative;
         z-index: 5;
         background-color: #fff;
         &-name {
+            width: 170px;
             font-weight: bold;
             font-size: 22px;
             line-height: 29px;
             text-transform: uppercase;
+        }
+        &-firstInfo {
+            text-align: center;
         }
         .skeleton {
             margin-top: 30px;
         }
     }
     &__basics {
-        display: grid;
-        grid-template-columns: 150px auto;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
         column-gap: 25px;
         img {
             width: 150px;
             height: 150px;
             object-fit: cover;
+            margin-bottom: 30px;
         }
     }
     &__btns {
+        width: 170px;
         margin-top: 35px;
         a:nth-child(2) {
             margin-top: 10px;
@@ -62,4 +70,24 @@
         text-align: center;
     }
 
+}
+
+@media (max-width: 551px) {
+    .char {
+        &__info {
+            padding: 25px 5px;
+            height: 2600px;
+            &-name {
+                margin: 0 auto;
+                width: 130px;
+                font-size: 20px;
+            }
+        }
+        &__basics {
+            img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    }
 }

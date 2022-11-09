@@ -4,18 +4,18 @@
     &__content {
         margin-top: 50px;
         display: grid;
-        grid-template-columns: 650px 425px;
-        column-gap: 25px;
-        align-items: start;
+        grid-template-columns: 60% 37.5%;
+        column-gap: 2.5%;
     }
     &__grid {
-        display: grid;
-        grid-template-columns: repeat(3, 200px);
+        display: flex;
+        flex-wrap: wrap;
         column-gap: 25px;
         row-gap: 30px;
+        justify-content: center;
     }
     &__item {
-        width: 200px;
+        width: 195px;
         height: 318px;
         background-color: $dark;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, .25);
@@ -23,7 +23,7 @@
         cursor: pointer;
         transition: 0.3s transform;
         img {
-            width: 200px;
+            width: 195px;
             height: 200px;
             object-fit: cover;
             transform: translate(-15px, -15px);
@@ -45,3 +45,18 @@
     }
 }
 
+@media (max-width: 551px) {
+    .char {
+        &__content {
+            grid-template-columns: 47% 47.5%;
+            column-gap: 5.5%;
+        }
+        &__item {
+            width: 150px;
+            img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+}

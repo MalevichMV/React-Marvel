@@ -42,7 +42,7 @@ const useMarvelService = () => {
 
     const _transformCharacter = (char) => {
         if (char.description.length > 200)
-            char.description = char.description.slice(0, 200) + '...';
+            char.description = char.description.slice(0, 190) + '...';
         return {    
             id: char.id,        
             name: char.name,
