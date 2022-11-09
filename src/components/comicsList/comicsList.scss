@@ -5,8 +5,9 @@
     &__grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, 225px);
-        justify-content: space-between;
+        justify-content: center;
         row-gap: 55px;
+        column-gap: 20px;
     }
     &__item {
         transition: 0.3s transform;
@@ -31,6 +32,21 @@
         }
         &:hover {
             transform: translateY(-5px);
+        }
+    }
+}
+
+
+@media (max-width: 551px) {
+    .comics {
+        &__grid {
+            grid-template-columns: repeat(auto-fill, 175px);
+        }
+        &__item {
+            &-img {
+                width: 175px;
+                height: 295px;
+            }
         }
     }
 }

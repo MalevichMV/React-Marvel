@@ -1,9 +1,9 @@
 @import '../../style/variables.scss';
 
 .single-comic {
-    margin-top: 50px;
+    margin-top: 10px;
     display: grid;
-    grid-template-columns: 293px 550px auto;
+    grid-template-columns: 293px auto 36px;
     column-gap: 50px;
     align-items: start;
     &__img {
@@ -34,6 +34,27 @@
         line-height: 24px;
         &:hover {
             color: $main-color;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .single-comic {
+        margin-top: -25px;
+        position: relative;
+        padding-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        &__img {
+            width: 227px;
+            height: 350px;
+            margin-bottom: 30px;
+        }
+        &__back {
+            position: absolute;
+            top: 0px;
+            right: 12px;
         }
     }
 }
